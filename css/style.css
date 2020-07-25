@@ -1,7 +1,7 @@
 /*
 
 1. Elementos principales (página). 
-    1.1. Elementos principales del Formulario.
+1.1. Elementos principales del Formulario.
 2. Cuerpo de la página.
 3. Imágenes de la página.
 4. Footer 
@@ -9,9 +9,12 @@
  */
 
 /* ---- 1. Elementos principales (Página). */
+
 html {
     font-family : sans-serif;
     background-color: rgb(122, 122, 121); 
+    margin-left: 19vw;
+    margin-right: 19vw;
 }
 
 #gatitos{
@@ -27,6 +30,7 @@ html {
     color:wheat;
     font-size: 70px; 
     margin-top: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 
@@ -37,22 +41,36 @@ nav{
     margin: 10px 20px;
 }
 
+a{
+    text-decoration: none;
+}
+
 nav a:hover{
     background-color:whitesmoke;
     padding: 10px;
 }
+
 /* ---- 1.1. Elementos generales del Formulario. */
 .titulo11{
-    color:wheat;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
     font-size: 70px; 
+    color:wheat;
     margin-top: 50px;
+    text-align: center;
 }
 
-p, .botonFormulario{
+p, .botonFormulario, .error{
+    padding-block-start: 20px;
     display: flex;
     justify-content: center;
     align-content: center;
 }
+
+.error:before {
+    color: red;
+    content: '\0274c '; /* ❌ icon */
+  }
 
 /* ---- 2. Cuerpo de la página. */
 main{
@@ -63,26 +81,30 @@ main{
 .titulo1{
     height: 50px;
     width: 170px;
-    padding-right: 70px;
+    padding-right: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: x-large;
-    position: relative;
-    left: 250px;
-}
-
-.parte1, .parte2{
-    border-color: black;
-    margin-left: 10px;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
-.parte1 p, .parte2 p{
-    width: 80%;
+.art1, .art2{
+    margin: 50px;
+    padding-inline-start: 20%;
+    display: flex;
+    flex-direction: row;
+    align-self: baseline;
+}
+
+p{
+    text-align: justify;
+    padding-left: 5px;
+    line-height: 1.2;
 }
 
 .sub2{
+    margin-top: 20px;
+    padding-block-start: 10px;
     font-size: large;
     color: rgb(53, 11, 90);
 }
@@ -91,12 +113,8 @@ main{
 /* ------ 3. Imágenes de la página. */
 
 .imagen1 {
-    height: 170px;
-    width: 100px;
-    position: relative;
-    bottom:170px;
-    left: 100%;
-    /* No consigo que la imagen quede de manera responsiva con el flex. Asi que, lo realicé de esta manera. */
+    height: auto;
+    width: 200px;
 }
 
 .imagen1:hover{
@@ -105,8 +123,7 @@ main{
 
 figure{
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    flex-direction: column
 }
 
 figure img{
@@ -114,4 +131,24 @@ figure img{
     height: 200px;
 }
 
+figure, .imagen1{
+    margin-left: 5%;
+}
+
+@media screen and (max-width: 600px) {
+   .art1, .titulo11 {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
 /* ----- 4. Footer */
+
+footer{
+    background-color: black;
+    height: 75px;
+    font-size: 20px; 
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
