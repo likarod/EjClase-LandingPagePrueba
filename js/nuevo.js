@@ -1,5 +1,5 @@
-let cambio = document.getElementsByClassName("imagen2")
+let cambio = document.getElementsByTagName("img");
 console.log(cambio);
-cambio.onclick = (event) => {
-    event.target.src="../img/cambio.jpg"
+cambio[1].onclick = (event) => {
+     event.target.src = ("img/cambio.jpg")
 }

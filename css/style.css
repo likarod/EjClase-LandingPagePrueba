@@ -15,6 +15,7 @@ html {
     background-color: rgb(122, 122, 121); 
     margin-left: 19vw;
     margin-right: 19vw;
+    cursor:ne-resize;
 }
 
 #gatitos{
@@ -37,17 +38,21 @@ html {
 nav{
     display: flex;
     justify-content: space-around;
-    background: rgba(105, 52, 105, 0.514);
     margin: 10px 20px;
 }
 
-a{
+nav a, .menu, .info{
     text-decoration: none;
+    color: black;
+    padding: 10px 10px;
+    border-color: black;
+    background-color: rgb(81, 49, 110);
+    border-radius: 5px;
 }
 
 nav a:hover{
     background-color:whitesmoke;
-    padding: 10px;
+    padding: 15px;
 }
 
 /* ---- 1.1. Elementos generales del Formulario. */
@@ -60,7 +65,7 @@ nav a:hover{
     text-align: center;
 }
 
-p, .botonFormulario, .error{
+div, .botonFormulario, .error{
     padding-block-start: 20px;
     display: flex;
     justify-content: center;
@@ -104,7 +109,8 @@ p{
 
 .sub2{
     margin-top: 20px;
-    padding-block-start: 10px;
+    padding-right: 40px;
+    padding-block-start: 20px;
     font-size: large;
     color: rgb(53, 11, 90);
 }
@@ -118,7 +124,7 @@ p{
 }
 
 .imagen1:hover{
-    transform: scale(10);
+    transform: scale(5);
 }
 
 figure{
@@ -136,7 +142,7 @@ figure, .imagen1{
 }
 
 @media screen and (max-width: 600px) {
-   .art1, .titulo11 {
+   .art1, .art2 .titulo11 {
       display: flex;
       flex-wrap: wrap;
     }
@@ -147,8 +153,13 @@ figure, .imagen1{
 footer{
     background-color: black;
     height: 75px;
-    font-size: 20px; 
+    font-size: 15px; 
     margin-top: 30px;
     display: flex;
     justify-content: space-around;
+}
+
+section a{
+    text-decoration: none;
+    padding: 10px;
 }
